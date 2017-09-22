@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  get 'notification/index'
+
   get 'home/index'
+
+  get 'contacts/success-notification', to: 'contacts#success_notification'
+  get 'contacts/error-notification', to: 'contacts#error_notification'
 
   resources :alerts
   resources :contacts
